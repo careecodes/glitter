@@ -1,0 +1,65 @@
+/* WOMEN WHO CODE GLITTER STYLE VARIABLES v1.0
+/* You may use this code however you need in your
+/* Women Who Code website!
+/* For the most recent variables version, please visit:
+/* https://github.com/WomenWhoCode/glitter
+/*
+
+/* === INDEX === */
+/*	1. COLORS
+/*	2. TYPOGRAPHY
+/*	3. PADDING
+/* ============= */
+
+/* === 1. COLORS === */
+
+//Official WWCode teal
+$teal:                      #007a7c;
+$teal-rgba:                 rgba(0, 122, 124, 0.8);
+
+//Other colors
+$blackish:                  #19191A;
+$blackish-rgba:             rgba(25, 25, 26, 0.5);
+$navy-bluish:               #0f283c;
+$navy-bluish-rgba:          rgba(15,40,60, 0.8);
+$red:                       #e04a32;
+$red-rgba:                  rgba(224,74,50, 0.9);
+$teal-light:                #029393;
+$teal-light-rgba:           rgba(2, 147, 147, 0.6);
+$teal-dark:                 #024f4f;
+$teal-dark-rgba:            rgba(2,79,79,.6);
+
+//Backgrounds
+$white:                     #ffffff;
+$whitish:                   #f5f5f5;
+
+//Links
+$link-teal:                #67bebf;
+
+//buttons
+$button-bg:                 $teal;
+$button-hover:              $teal-light;
+$button-focus:              $teal-dark;
+
+//Alerts
+$error-inline-color:        $red;
+$error-alert-background:    $red-rgba;
+$success-alert-background:  $teal-rgba;
+
+/* === 2. TYPOGRAPHY === */
+
+//Font Families
+$base-font-family:          "Lucida Grande";
+
+//Font Sizes
+$base-font-size:            18px;
+$base-mobile-size:          16px;
+
+//Font Colors
+$base-font-color:           $blackish;
+
+
+/* === 3. PADDING === */
+
+//General Padding
+$standard-padding:          30px;
