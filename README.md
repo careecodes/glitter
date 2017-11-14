@@ -10,3 +10,11 @@ Since this repo is an scss file of variables, your app will need to support [sas
 
 ## Installation
 Coming soon
+
+## Open Source License
+
+[The Non-Profit Open Software License version 3.0 (NPOSL-3.0)](https://opensource.org/licenses/NPOSL-3.0)
+
+Contact coreteam@womenwhocode.com with any questions
+
+*WWCode reserves the right to change the open source license at anytime*
