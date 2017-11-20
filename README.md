@@ -11,6 +11,21 @@ Since this repo is an scss file of variables, your app will need to support [sas
 ## Installation
 Coming soon
 
+### Contributing
+
+:tada:
+
+Getting ready to start jumping in? :smiley_cat: Once you've read this README, jump to our [contributing guidelines](.github/CONTRIBUTING.md), our PR process is contingent on this.
+
+## Discuss project issues and efforts
+* If you have questions or comments about a particular issue or pull request, you can submit a comment directly in GitHub.  For further discussion, [sign up to join](http://goo.gl/forms/3TZ3eO47Yc) the Women Who Code Projects/Apps Slack team.
+
+## Project Reviewers
+* @WomenWhoCode/glitter-reviews
+  * [kaitlynhova](https://github.com/kaitlynhova)
+  * [Zassmin](https://github.com/zassmin)
+  * [isometimescode](https://github.com/isometimescode)
+
 ## Open Source License
 
 [The Non-Profit Open Software License version 3.0 (NPOSL-3.0)](https://opensource.org/licenses/NPOSL-3.0)
