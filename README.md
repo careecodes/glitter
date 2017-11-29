@@ -3,7 +3,12 @@
 **Official Styles variables for Women Who Code**
 
 ## About
-This Repo includes the holy grail of Women Who Code style variables so you can have Women Who Code "glitter" on your website.
+This Repo includes the holy grail of Women Who Code style variables so you can have Women Who Code "glitter" on your website. Guidelines for usage are covered by [the Non-Profit Open Software License version 3.0 (NPOSL-3.0)](https://opensource.org/licenses/NPOSL-3.0).
+
+## Open Source License
+[The Non-Profit Open Software License version 3.0 (NPOSL-3.0)](https://opensource.org/licenses/NPOSL-3.0).
+Contact coreteam@womenwhocode.com with any questions.
+*WWCode reserves the right to change the open source license at anytime.*
 
 ### Contributing
 
@@ -20,23 +25,16 @@ Getting ready to start jumping in? :smiley_cat: Once you've read this README, ju
   * [Zassmin](https://github.com/zassmin)
   * [isometimescode](https://github.com/isometimescode)
 
-## Open Source License
-The Non-Profit Open Software License version 3.0 (NPOSL-3.0)
-Contact coreteam@womenwhocode.com with any questions
-WWCode reserves the right to change the open source license at anytime
-
 ## Requirements
-Since this repo is an scss file of variables, your app will need to support [sass](http://sass-lang.com/install). Check out [their docs to check out how to install sass in your app](http://sass-lang.com/install).
+Since this repo is a scss file of variables, your app will need to support [sass](http://sass-lang.com/install). Check out [their docs to check out how to install sass in your app](http://sass-lang.com/install).
 
 ## Installation
 
 **If you use CSS**
-Add this tag in the [head tag](https://www.w3schools.com/tags/tag_head.asp) of your app:
+Add this tag in the [head tag](https://www.w3schools.com/tags/tag_head.asp) of your app before any other style tags:
 ```
-<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/WomenWhoCode/glitter/4/wwcode.css?token=put_your_github_AIP_token_here_with_no_quotes">
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/WomenWhoCode/glitter/4/wwcode.css" />
 ```
-[Learn how to get a github API token here](https://github.com/blog/1509-personal-api-tokens)
-
 
 **If you use SCSS**
 Import the scss file into your app!
@@ -46,17 +44,19 @@ First, navigate to the folder you'd like to host the Women Who Code styles in.
 cd /url/to/your/scss/folder
 ```
  
-Then, import the files:
-```
-curl -o wwcode.scss https://raw.githubusercontent.com/WomenWhoCode/glitter/4/wwcode.scss?token=put_your_github_AIP_token_here_with_no_quotes
-```
-[Learn how to get a github API token here](https://github.com/blog/1509-personal-api-tokens)
+Then, download the files into your project:
 
-Then, import the styles into your main scss file:
+```
+curl -o wwcode.scss https://raw.githubusercontent.com/WomenWhoCode/glitter/4/wwcode.scss
+```
+
+Next, make sure that the wwcode styles are imported into your main app style file. Sometimes this is done automatically in your asset pipeline, but if it's not you need to import it into your desired main style file with this line:
 
 ```
 @import "wwcode";
 ```
+
+
 
 ## Guide
 If instalation is sucessful & there are no overriding styles in your app, you should be able to copy and paste the following code into your app:
@@ -77,114 +77,190 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ---
 
 ### Links
+*NOTE: when links are hovered, they should have a teal background & black text.*
 
 #### Link
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510606387739-Screen+Shot+2017-11-13+at+12.50.31+PM.png" width="50">
 
 ```
-<a>Link</a>
+<a class="wwcode-link" href="womenwhocode.com">Link</a>
 ```
 
 #### Link with Underline
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510606574130-Screen+Shot+2017-11-13+at+12.55.26+PM.png" width="50">
 
 ```
-<a class="underline">Link</a>
+<a class="wwcode-link wwcode-link-underline" href="womenwhocode.com">Link</a>
 ```
 
 
 ### Buttons
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510597933885-Screen+Shot+2017-11-13+at+10.31.58+AM.png" width="150">
+*NOTE: When buttons are hovered they should have a lighter teal color. When they are pressed they should have a darker teal color.*
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840800017-Screen+Shot+2017-11-27+at+7.46.23+PM.png" width="150">
 
 ```
-<button> Yay! </button>
+<button class="wwcode-button"> Yay! </button>
 ```
 
 ### Checkboxes
 
+*NOTE: Checkboxes will require Javascript. Here is an example if you want to use straight Javascript in order to make it work:*
+```
+<script>
+  $('.wwcode-square').click(function(){
+    var isChecked = event.target.nextElementSibling.checked;
+    $(this).toggleClass("selected");
+    event.target.nextElementSibling.checked = !isChecked;
+  });
+</script>
+```
+
 #### Unselected
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510610716958-Screen+Shot+2017-11-13+at+2.03.29+PM.png" width="200">
+
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840339881-Screen+Shot+2017-11-27+at+7.36.49+PM.png" width="200">
 
 ```
-<div class="checkbox"> 
-  <span class="square"></span>
-  <span>This is a Checkbox</span>
+<label class="wwcode-label">Title</label>
+<div class="wwcode-checkbox"> 
+  <span class="wwcode-square"></span>
   <input type="checkbox" />
+  <span class="wwcode-checkbox-text">This is a Checkbox</span>
+</div>
+<div class="wwcode-checkbox"> 
+  <span class="wwcode-square"></span>
+  <input type="checkbox" />
+  <span class="wwcode-checkbox-text">This is a Checkbox</span>
 </div>
 ```
 
 #### Selected
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510610723036-Screen+Shot+2017-11-13+at+2.03.48+PM.png" width="200">
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840381116-Screen+Shot+2017-11-27+at+7.37.25+PM.png" width="280">
 
 ```
-<div class="checkbox"> 
-  <span class="square selected"></span>
-  <span>This is a Checkbox</span>
-  <input type="checkbox" />
+<label class="wwcode-label">Title</label>
+<div class="wwcode-checkbox"> 
+  <span class="wwcode-square"></span>
+  <input type="checkbox" checked/>
+  <span class="wwcode-checkbox-text">This is a Selected Checkbox</span>
+</div>
+<div class="wwcode-checkbox"> 
+  <span class="wwcode-square"></span>
+  <input type="checkbox" checked/>
+  <span class="wwcode-checkbox-text">This is a Selected Checkbox</span>
 </div>
 ```
 
 ### Radios
+*NOTE: Radio buttons will require Javascript. Here is an example if you want to use straight Javascript in order to make it work:*
+```
+<script>
+  $('.wwcode-square').click(function(){
+    var isChecked = event.target.nextElementSibling.checked;
+    $(this).toggleClass("selected");
+    event.target.nextElementSibling.checked = !isChecked;
+  });
+</script>
+```
 
 #### Unselected
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510611563892-Screen+Shot+2017-11-13+at+2.18.51+PM.png" width="200">
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840537462-Screen+Shot+2017-11-27+at+7.42.01+PM.png" width="240">
 
 ```
-<div class="radio"> 
-  <span class="square"></span>
-  <span>This is a Radio Button</span>
+<label class="wwcode-label">Title</label>
+<div class="wwcode-radio"> 
+  <span class="wwcode-square"></span>
   <input type="radio" />
+  <span class="wwcode-radio-text">This is a Radio Button</span>
+</div>
+<div class="wwcode-radio"> 
+  <span class="wwcode-square"></span>
+  <input type="radio" />
+  <span class="wwcode-radio-text">This is a Radio Button</span>
 </div>
 ```
 
 #### Selected
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510611571710-Screen+Shot+2017-11-13+at+2.19.05+PM.png" width="200">
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840640697-Screen+Shot+2017-11-27+at+7.43.41+PM.png" width="300">
 
 ```
-<div class="radio"> 
-  <span class="square selected"></span>
-  <span>This is a Radio Button</span>
+<label class="wwcode-label">Title</label>
+<div class="wwcode-radio"> 
+  <span class="wwcode-square"></span>
+  <input type="radio" checked/>
+  <span class="wwcode-radio-text">This is a Selected Radio Button</span>
+</div>
+<div class="wwcode-radio"> 
+  <span class="wwcode-square"></span>
   <input type="radio" />
+  <span class="wwcode-radio-text">This is a Radio Button</span>
 </div>
 ```
 
 ### Uploaders
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510603096222-Screen+Shot+2017-11-13+at+11.58.01+AM.png" width="250">
+*NOTE: When hovered, uploaders should have a teal border with teal text.*
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840894361-Screen+Shot+2017-11-27+at+7.47.59+PM.png" width="330">
 
 ```
-<div id="filepicker_url"><p>Click to Upload</p></div>
+<div id="wwcode-filepicker-url"><p>Click to Upload</p></div>
 ```
+
 ### Textareas
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510605847755-Screen+Shot+2017-11-13+at+12.43.57+PM.png" width=600>
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511841007824-Screen+Shot+2017-11-27+at+7.49.54+PM.png" width=430>
 
 ```
-<textarea>General Textarea</textarea>
+<label class="wwcode-label">Title</label>
+<textarea class="wwcode-textarea">General Textarea</textarea>
 ```
 
 ### Inputs
 
-![input img](https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510597768760-Screen+Shot+2017-11-13+at+10.28.23+AM.png)
+**text**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511889214668-Screen+Shot+2017-11-28+at+9.13.04+AM.png" width="350">
 
 ```
-<label for="">Title</label>
-<input type="" name="" id="" autofocus="autofocus" required="" placeholder="this is an input">
+<label class="wwcode-label">Title</label>
+<input type="text" class="wwcode-input" placeholder="This is a general text input">
+```
+
+**Number**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511889296394-Screen+Shot+2017-11-28+at+9.12.56+AM.png" width="350">
+
+```
+<label class="wwcode-label">Title</label>
+<input type="number" class="wwcode-input" placeholder="This is a general number input">
+```
+
+**submit**
+*NOTE: When submit inputs are hovered they should have a lighter teal color. When they are pressed they should have a darker teal color.*
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511889346083-Screen+Shot+2017-11-28+at+9.12.46+AM.png" width="350">
+
+```
+<input type="submit" class="wwcode-input" placeholder="This is a general submit input">
 ```
 
 ### Tags
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510605696554-Screen+Shot+2017-11-13+at+12.39.09+PM.png" width="100">
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511892815965-Screen+Shot+2017-11-28+at+10.13.16+AM.png" width="380">
 
 ```
-<div class="tag">
+<label class="wwcode-label">Title</label>
+<input type="text" class="wwcode-input" placeholder="This is a general input">
+<div class="wwcode-tag">
   <span>tag</span>
-  <span class="delete">+</span>
+  <span class="wwcode-delete">+</span>
 </div>
 ```
 
 ### Selects
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510602799890-Screen+Shot+2017-11-13+at+11.53.00+AM.png" width="250">
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511903624321-Screen+Shot+2017-11-28+at+1.13.14+PM.png" width="300">
 
 ```
-<select>
+<label class="wwcode-label">Title</label>
+<select class="wwcode-select">
   <option>Cool Select</option>
 </select>
 ```
@@ -192,34 +268,50 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ### Errors
 
 #### Inline_errors
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510604096279-Screen+Shot+2017-11-13+at+12.14.37+PM.png" width="300">
+
+NOTE: If you want inline error functionality you will need to use javascript in order to update a general input to display an error. Here is an example:
+```
+<script>
+  $('.wwcode-input').addClass('wwcode-error-input');
+  $('.wwcode-error-text').text("This is inline error text.");
+</script>
+```
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510604096279-Screen+Shot+2017-11-13+at+12.14.37+PM.png" width="350">
 
 ```
-<label for="">Title</label>
-<input class="error" type="" name="" id="" autofocus="autofocus" required="" placeholder="This is a general input with error">
-<div class="error-text">
+<label class="wwcode-label">Title</label>
+<input class="wwcode-error-input wwcode-input" placeholder="This is a general input with error">
+<div class="wwcode-error-text">
   <span>This is inline error text.</span>
 </div>
 ```
 
 
 ### Alerts
-
-#### Nice Alert Banner
-<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510605336350-nice-alert.jpg" width="600">
+NOTE: place these outside of any width constraining container (banners will be 100% the width of the screen). Banners will appear under your top nav, which is assumed to be fixed at the top of the page & 75px high.
+#### Sucess Alert Banner
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511299152083-sucess.jpg" width="600">
 
 ```
-<div class="alert">
-  <span>Nice Alert!</span>
-  <span class="delete">+</span>
+<div class="wwcode-alert">
+  <span class="wwcode-alert-text">Sucess Alert!</span>
+  <span class="wwcode-delete">+</span>
 </div>
 ```
 #### Error Alert Banner
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510604996148-Screen+Shot+2017-11-13+at+12.29.41+PM.png" width="600">
 
 ```
-<div class="alert alert-error">
-  <span>Error Alert!</span>
-  <span class="delete">+</span>
+<div class="wwcode-alert wwcode-alert-error">
+  <span class="wwcode-alert-text">Error Alert!</span>
+  <span class="wwcode-delete">+</span>
 </div>
 ```
+
+### Open Source License
+
+[The Non-Profit Open Software License version 3.0 (NPOSL-3.0)](https://opensource.org/licenses/NPOSL-3.0)
+
+Contact coreteam@womenwhocode.com with any questions
+
+WWCode reserves the right to change the open source license at anytime

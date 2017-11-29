@@ -82,11 +82,14 @@ $top-nav-height:            75px;
 /* ====================== */
 
 //Button
-button{
+button.wwcode-button{
   background-color: $button-bg;
   border: none;
   border-radius: 0;
   color: $white;
+  cursor: pointer;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
   outline: none;
   margin: $standard-padding 0;
   padding: $standard-padding/1.5 $standard-padding*2;
@@ -103,17 +106,19 @@ button{
 }
 
 //Checkboxes
-.checkbox{
-  .square {
+.wwcode-checkbox{
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  margin-bottom: $standard-padding;
+  .wwcode-square {
     cursor: pointer;
     background: $white;
     border: $standard-padding/10 solid $blackish;
     margin-right: $standard-padding/2;
     margin-left: auto;
-    margin-top: $standard-padding/-7.5;
     float: left;
-    width: $standard-padding;
-    height: $standard-padding;
+    width: $standard-padding/1.2;
+    height: $standard-padding/1.2;
     &.selected {
       background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala-staging/uploads%2F1508959867618-check-teal.svg");
       border: $standard-padding/10 solid $teal;
@@ -122,19 +127,30 @@ button{
       background-position: center;
     }
   }
+  span{
+    &.wwcode-checkbox-text{
+      position: relative;
+      top: $standard-padding/6;
+    }
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
 }
 
-.radio{
-  .square {
+.wwcode-radio{
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  margin-bottom: $standard-padding;
+  .wwcode-square {
     cursor: pointer;
     background: $white;
     border: $standard-padding/10 solid $blackish;
     margin-right: $standard-padding/2;
     margin-left: auto;
-    margin-top: $standard-padding/-7.5;
     float: left;
-    width: $standard-padding;
-    height: $standard-padding;
+    width: $standard-padding/1.2;
+    height: $standard-padding/1.2;
     &.selected {
       background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala-staging/uploads%2F1508959867618-check-teal.svg");
       border: $standard-padding/10 solid $teal;
@@ -142,27 +158,63 @@ button{
       background-repeat: no-repeat;
       background-position: center;
     }
+  }
+  span{
+    &.wwcode-radio-text{
+      position: relative;
+      top: $standard-padding/6;
+    }
+  }
+  input[type="radio"]{
+    display: none;
   }
 }
 
 //Image Uploaders
-#filepicker_url{
-  cursor: pointer;
+#wwcode-filepicker-url{
   border-style: dashed;
-  text-align: center;
+  border-color: $blackish;
   color: $blackish;
-  padding: $standard-padding/1.5 $standard-padding/2 $standard-padding/3 $standard-padding/2;
+  cursor: pointer;
+  font-family: $base-font-family;
+  text-align: center;
+  transition: .5s;
+  padding: $standard-padding/1.5;
   letter-spacing: $standard-padding/15;
+  &:hover{
+    border-color: $teal;
+    button{
+      color: $teal;
+    }
+    p{
+      color: $teal;
+    }
+  }
+  p{
+    margin: 0;
+    transition: .5s;
+  }
+  button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    outline: none;
+    transition: .5s;
+    -webkit-appearance: none;
+  }
 }
 
 //Inputs
-input{
+input.wwcode-input{
   border: none;
   border-bottom: $input-border-size solid $blackish;
+  box-sizing: border-box;
   box-shadow: none;
   font-size: $base-font-size;
   letter-spacing: $base-font-spacing;
-  padding: $standard-padding/1.5  $standard-padding/1.2 $standard-padding/1.2 0;
+  padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0; 
   width: 100%;
   &:active{
       box-shadow: none;
@@ -183,19 +235,31 @@ input{
   &[type="checkbox"]{
       display: none;
   }
+  &[type='number']{
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &::-webkit-inner-spin-button{
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
   &[type="radio"]{
     display: none;
   }
   &[type="submit"]{
     color: $white;
+    cursor: pointer;
     border-bottom: none;
     border-radius: 0;
     background: $teal;
-    width: 100%;
+    margin-top: $standard-padding;
     padding: $standard-padding/1.5;
-    font-weight: bold;
     letter-spacing: $base-font-spacing;
     transition: .5s;
+    width: 100%;
     &:hover{
       background-color: $teal-light;
     }
@@ -206,42 +270,47 @@ input{
 }
 
 //Labels
-label{
+label.wwcode-label{
   color: $blackish;
   display: block;
+  font-family: $base-font-family;
   font-size: $base-font-size;
   letter-spacing: $standard-padding/10;
   margin-top: $standard-padding;
+  padding-bottom: $standard-padding/5;
   text-transform: uppercase;
 }
   
 //Selects
-select{
+select.wwcode-select{
   background: $white;
   background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala-staging/uploads%2F1508955808225-dropdown.svg");
   background-size: $standard-padding*2;
   background-repeat: no-repeat;
   background-position: right;
   border: $input-border-size solid $blackish;
-  width: 100%;
-  margin-bottom: $standard-padding;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   border-radius: 0px;
-  padding: $standard-padding/1.5;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  -moz-appearance: none;
+  padding: $standard-padding/1.5; 
+  -webkit-appearance: none;
+  width: 100%;
 }
 
 //Tags
-.tag{
+.wwcode-tag{
   background-color: $teal;
   color: $white;
+  display: inline-block;
   padding: $standard-padding/2;
   padding-right: $standard-padding;
   padding-bottom: $standard-padding/3;
-  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
   margin-top: $standard-padding/2;
   margin-right: $standard-padding/2;
-  .delete{
+  .wwcode-delete{
     color: $white;
     font-size: $standard-padding;
     transform: rotate(45deg);
@@ -258,13 +327,17 @@ select{
 }
 
 //Textareas
-textarea{
-  width: 100%;
-  position: relative;
+textarea.wwcode-textarea{
   border: $input-border-size solid $blackish;
-  padding: $standard-padding/2;
+  box-sizing: border-box;
+  padding: $standard-padding/1.5;
+  position: relative;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  resize: none;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+  width: 100%;
   &:active{
     outline: none;
   }
@@ -280,10 +353,18 @@ textarea{
 /* === 3. LINK STYLES === */
 /* ====================== */
 
-a{
+a.wwcode-link{
   color: $teal;
   cursor: pointer;
-  &.underline{
+  font-family: $base-font-family;
+  text-decoration: none;
+  font-size: $base-font-size;
+  transition: .5s;
+  &:hover{
+    background-color: $link-teal;
+    color: $blackish;
+  }
+  &.wwcode-link-underline{
     color: $blackish;
     border-bottom: $standard-padding/6 solid $link-teal;
     &:hover{
@@ -296,15 +377,21 @@ a{
 /* === 4. ERROR STYLES === */
 /* ======================= */
 
-.error-text{
+.wwcode-error-text{
   color: $red;
   margin-top: $standard-padding/3;
   margin-bottom: $standard-padding/2;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
 }
-.error-input{
-  border: $input-border-size solid $red;
-  &:focus{
+.wwcode-input{
+  &.wwcode-error-input{
     border: $input-border-size solid $red;
+    padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;  
+    border: $input-border-size solid $red;
+    &:focus{
+      border: $input-border-size solid $red;
+    }
   }
 }
 
@@ -312,26 +399,33 @@ a{
 /* === 5. ALERT STYLES === */
 /* ======================= */
 
-.alert{
-  color: $white;
-  padding: $standard-padding/1.2;
-  text-align: center;
-  letter-spacing: $base-font-spacing;
+.wwcode-alert{
   background-color: $teal-rgba;
+  color: $white;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  left: 0;
+  letter-spacing: $base-font-spacing;
+  padding: $standard-padding/1.5;
   position: fixed;
-  z-index: 9;
-  width: 100%;
+  text-align: center;
   top: $top-nav-height;
-  &.alert-error{
+  width: 100%;
+  z-index: 9;
+  &.wwcode-alert-error{
     background-color: $red-rgba;
   }
-  a{
+  a.wwcode-link{
     border-bottom: $input-border-size solid $white;
     &:hover{
       color: $white;
     }
   }
-  .delete{
+  .wwcode-alert-text{
+    position: relative;
+    top: $standard-padding/7.5;
+  }
+  .wwcode-delete{
     color: $white;
     font-size: $standard-padding;
     transform: rotate(45deg);
@@ -342,10 +436,10 @@ a{
     height: $standard-padding*.93;
     margin: 0;
     position: relative;
-    right: $standard-padding/3;
+    right: $standard-padding*1.5;
     top: $standard-padding/-5;
   }
-  span{
+  span.wwcode-span{
     position: relative;
     top: $standard-padding/15;
   }
