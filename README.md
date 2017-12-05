@@ -95,7 +95,10 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 
 ### Buttons
-*NOTE: When buttons are hovered they should have a lighter teal color. When they are pressed they should have a darker teal color.*
+*NOTE:* 
+- *When buttons are hovered they should have a lighter teal color.* 
+- *When buttons are pressed they should have a darker teal color.*
+- *When buttons are disabled they should be gray and not allow pointer events*
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840800017-Screen+Shot+2017-11-27+at+7.46.23+PM.png" width="150">
 
@@ -217,6 +220,23 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 ### Inputs
 
+**button**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840800017-Screen+Shot+2017-11-27+at+7.46.23+PM.png" width="150">
+
+```
+<input class="wwcode-input" type="button" value="Yay!">
+```
+
+**reset button**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512516024237-reset.jpg" width="150">
+
+```
+<input class="wwcode-input" type="reset" value="button">
+```
+
+
 **text**
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511889214668-Screen+Shot+2017-11-28+at+9.13.04+AM.png" width="350">
@@ -233,6 +253,51 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 <label class="wwcode-label">Title</label>
 <input type="number" class="wwcode-input" placeholder="This is a general number input">
+```
+
+**Date**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515373899-Screen+Shot+2017-12-05+at+3.09.19+PM.png" width="350">
+
+```
+<label class="wwcode-label">Title</label>
+<input class="wwcode-input" type="date">
+```
+
+**Datetime-local**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515548207-Screen+Shot+2017-12-05+at+3.11.57+PM.png" width="350">
+
+```
+<label class="wwcode-label">Title</label>
+<input class="wwcode-input" type="datetime-local">
+```
+
+**Month**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515479496-Screen+Shot+2017-12-05+at+3.10.43+PM.png" width="350">
+
+```
+<label class="wwcode-label">Title</label>
+<input class="wwcode-input" type="month">
+```
+
+**Range**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515188148-Screen+Shot+2017-12-05+at+3.06.03+PM.png" width="390">
+
+```
+<label class="wwcode-label">Title</label>
+<input class="wwcode-input" type="range" min="1" max="100" value="50">
+```
+
+**Color**
+
+<img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515648335-Screen+Shot+2017-12-05+at+3.13.08+PM.png" width="70">
+
+```
+<label class="wwcode-label">Title</label>
+<input class="wwcode-input" type="color">
 ```
 
 **submit**
