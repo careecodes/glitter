@@ -96,6 +96,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 ### Buttons
 *NOTE: When buttons are hovered they should have a lighter teal color. When they are pressed they should have a darker teal color.*
+
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840800017-Screen+Shot+2017-11-27+at+7.46.23+PM.png" width="150">
 
 ```
@@ -234,6 +235,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 **submit**
+
 *NOTE: When submit inputs are hovered they should have a lighter teal color. When they are pressed they should have a darker teal color.*
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511889346083-Screen+Shot+2017-11-28+at+9.12.46+AM.png" width="350">
