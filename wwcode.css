@@ -26,9 +26,13 @@ button.wwcode-button {
   outline: none;
   margin: 30px 0;
   padding: 20px 60px;
-  transition: .5s;
+  transition: 0.5s;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+}
+button.wwcode-button:disabled {
+  background-color: #878C8C;
+  pointer-events: none;
 }
 button.wwcode-button:hover {
   background-color: #029393;
@@ -105,7 +109,7 @@ button.wwcode-button:focus {
   cursor: pointer;
   font-family: "Lucida Grande";
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
   padding: 20px;
   letter-spacing: 2px;
 }
@@ -120,7 +124,7 @@ button.wwcode-button:focus {
 }
 #wwcode-filepicker-url p {
   margin: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 #wwcode-filepicker-url button {
   background-color: transparent;
@@ -129,7 +133,7 @@ button.wwcode-button:focus {
   font-family: "Lucida Grande";
   font-size: 18px;
   outline: none;
-  transition: .5s;
+  transition: 0.5s;
   -webkit-appearance: none;
 }
 
@@ -138,6 +142,7 @@ input.wwcode-input {
   border-bottom: 3px solid #19191A;
   box-sizing: border-box;
   box-shadow: none;
+  font-family: "Lucida Grande";
   font-size: 18px;
   letter-spacing: 2px;
   padding: 20px 20px 20px 0;
@@ -147,6 +152,10 @@ input.wwcode-input:active {
   box-shadow: none;
   outline: none;
   border-bottom: 3px solid #19191A;
+}
+input.wwcode-input:disabled {
+  background: transparent;
+  border-bottom: 3px solid #878C8C;
 }
 input.wwcode-input:focus {
   box-shadow: none;
@@ -159,7 +168,75 @@ input.wwcode-input.error {
 input.wwcode-input.error:focus {
   color: #e04a32;
 }
+input.wwcode-input[type="button"], input.wwcode-input[type="reset"] {
+  background-color: #007a7c;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Lucida Grande";
+  font-size: 18px;
+  outline: none;
+  margin: 30px 0;
+  padding: 20px 60px;
+  transition: 0.5s;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+input.wwcode-input[type="button"]:disabled, input.wwcode-input[type="reset"]:disabled {
+  background-color: #878C8C;
+  pointer-events: none;
+}
+input.wwcode-input[type="button"]:hover, input.wwcode-input[type="reset"]:hover {
+  background-color: #029393;
+}
+input.wwcode-input[type="button"]:focus, input.wwcode-input[type="reset"]:focus {
+  outline: none;
+  background-color: #024f4f;
+}
+input.wwcode-input[type="reset"] {
+  background-color: #19191A;
+}
 input.wwcode-input[type="checkbox"] {
+  display: none;
+}
+input.wwcode-input[type="color"] {
+  background: transparent;
+  border: none;
+  box-sizing: inherit;
+  width: 30px;
+  height: 30px;
+}
+input.wwcode-input[type="color"]:disabled {
+  opacity: .5;
+  border: none;
+}
+input.wwcode-input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border: none;
+}
+input.wwcode-input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+input.wwcode-input[type="color"]::-moz-color-swatch {
+  border: none;
+}
+input.wwcode-input[type="date"], input.wwcode-input[type="month"], input.wwcode-input[type="datetime-local"] {
+  font-family: "Lucida Grande";
+  box-sizing: border-box;
+}
+input.wwcode-input[type="date"]::-webkit-datetime-edit, input.wwcode-input[type="month"]::-webkit-datetime-edit, input.wwcode-input[type="datetime-local"]::-webkit-datetime-edit {
+  font-family: "Lucida Grande";
+}
+input.wwcode-input[type="date"]::-webkit-outer-spin-button, input.wwcode-input[type="month"]::-webkit-outer-spin-button, input.wwcode-input[type="datetime-local"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input.wwcode-input[type="date"]::-webkit-inner-spin-button, input.wwcode-input[type="month"]::-webkit-inner-spin-button, input.wwcode-input[type="datetime-local"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input.wwcode-input[type="date"]::-webkit-calendar-picker-indicator, input.wwcode-input[type="month"]::-webkit-calendar-picker-indicator, input.wwcode-input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 input.wwcode-input[type='number'] {
@@ -176,6 +253,118 @@ input.wwcode-input[type='number']::-webkit-inner-spin-button {
 input.wwcode-input[type="radio"] {
   display: none;
 }
+input.wwcode-input[type=range] {
+  -webkit-appearance: none;
+  border-bottom: 0;
+  width: 100%;
+  margin: 15px 0;
+}
+input.wwcode-input[type=range]:focus {
+  outline: none;
+}
+input.wwcode-input[type=range]:disabled {
+  pointer-events: none;
+}
+input.wwcode-input[type=range]:disabled::-webkit-slider-runnable-track {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]:disabled::-webkit-slider-thumb {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]:disabled::-moz-range-track {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]:disabled::-moz-range-thumb {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]:disabled::-ms-track {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]:disabled::-ms-fill-lower {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]:disabled::-ms-fill-upper {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]:disabled::-ms-thumb {
+  background: #878C8C;
+}
+input.wwcode-input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #19191A;
+  border-radius: 0;
+}
+input.wwcode-input[type=range]::-webkit-slider-thumb {
+  box-shadow: none;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #007a7c;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9.00901px;
+}
+input.wwcode-input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #19191A;
+}
+input.wwcode-input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #19191A;
+  border-radius: 0;
+  border: 0px solid #19191A;
+}
+input.wwcode-input[type=range]::-moz-range-thumb {
+  box-shadow: none;
+  border: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #007a7c;
+  cursor: pointer;
+}
+input.wwcode-input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input.wwcode-input[type=range]::-ms-fill-lower {
+  background: #086191;
+  border: 0 solid #19191A;
+  border-radius: 2.6px;
+  box-shadow: none;
+}
+input.wwcode-input[type=range]::-ms-fill-upper {
+  background: #0971a9;
+  border: 0 solid #19191A;
+  border-radius: 2.6px;
+  box-shadow: none;
+}
+input.wwcode-input[type=range]::-ms-thumb {
+  box-shadow: none;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #007a7c;
+  cursor: pointer;
+  height: 3px;
+}
+input.wwcode-input[type=range]:focus::-ms-fill-lower {
+  background: #007a7c;
+}
+input.wwcode-input[type=range]:focus::-ms-fill-upper {
+  background: #007a7c;
+}
 input.wwcode-input[type="submit"] {
   color: #ffffff;
   cursor: pointer;
@@ -185,8 +374,12 @@ input.wwcode-input[type="submit"] {
   margin-top: 30px;
   padding: 20px;
   letter-spacing: 2px;
-  transition: .5s;
+  transition: 0.5s;
   width: 100%;
+}
+input.wwcode-input[type="submit"]:disabled {
+  pointer-events: none;
+  background: #878C8C;
 }
 input.wwcode-input[type="submit"]:hover {
   background-color: #029393;
@@ -280,7 +473,7 @@ a.wwcode-link {
   font-family: "Lucida Grande";
   text-decoration: none;
   font-size: 18px;
-  transition: .5s;
+  transition: 0.5s;
 }
 a.wwcode-link:hover {
   background-color: #67bebf;

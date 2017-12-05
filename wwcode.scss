@@ -38,8 +38,11 @@ $teal-dark-rgba:            rgba(2,79,79,.6);
 $white:                     #ffffff;
 $whitish:                   #f5f5f5;
 
+//Animations
+$delay-time:                .5s;
 //Links
 $link-teal:                #67bebf;
+$disabled-gray:            #878C8C;
 
 //buttons
 $button-bg:                 $teal;
@@ -93,9 +96,13 @@ button.wwcode-button{
   outline: none;
   margin: $standard-padding 0;
   padding: $standard-padding/1.5 $standard-padding*2;
-  transition: .5s;
+  transition: $delay-time;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+  &:disabled{
+    background-color: $disabled-gray;
+    pointer-events: none;
+  }
   &:hover{
     background-color: $button-hover;
   }
@@ -178,7 +185,7 @@ button.wwcode-button{
   cursor: pointer;
   font-family: $base-font-family;
   text-align: center;
-  transition: .5s;
+  transition: $delay-time;
   padding: $standard-padding/1.5;
   letter-spacing: $standard-padding/15;
   &:hover{
@@ -192,7 +199,7 @@ button.wwcode-button{
   }
   p{
     margin: 0;
-    transition: .5s;
+    transition: $delay-time;
   }
   button{
     background-color: transparent;
@@ -201,7 +208,7 @@ button.wwcode-button{
     font-family: $base-font-family;
     font-size: $base-font-size;
     outline: none;
-    transition: .5s;
+    transition: $delay-time;
     -webkit-appearance: none;
   }
 }
@@ -212,6 +219,7 @@ input.wwcode-input{
   border-bottom: $input-border-size solid $blackish;
   box-sizing: border-box;
   box-shadow: none;
+  font-family: $base-font-family;
   font-size: $base-font-size;
   letter-spacing: $base-font-spacing;
   padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0; 
@@ -220,6 +228,10 @@ input.wwcode-input{
       box-shadow: none;
       outline: none;
       border-bottom: $input-border-size solid $blackish;
+  }
+  &:disabled{
+    background: transparent;
+    border-bottom: $standard-padding/10 solid $disabled-gray;
   }
   &:focus{
       box-shadow: none;
@@ -232,8 +244,76 @@ input.wwcode-input{
           color: $red;
       }
   }
+  &[type="button"], &[type="reset"] {
+    background-color: $button-bg;
+    border: none;
+    border-radius: 0;
+    color: $white;
+    cursor: pointer;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    outline: none;
+    margin: $standard-padding 0;
+    padding: $standard-padding/1.5 $standard-padding*2;
+    transition: $delay-time;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    &:disabled{
+      background-color: $disabled-gray;
+      pointer-events: none;
+    }
+    &:hover{
+      background-color: $button-hover;
+    }
+    &:focus{
+      outline: none;
+      background-color: $button-focus;
+    }
+  }
+  &[type="reset"]{
+    background-color: $blackish;
+  }
   &[type="checkbox"]{
       display: none;
+  }
+  &[type="color"] {
+    background: transparent;
+    border: none;
+    box-sizing: inherit;
+    width: $standard-padding;
+    height: $standard-padding;
+    &:disabled{
+      opacity: .5;
+      border: none;
+    }
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+      border: none;
+    }
+    &::-webkit-color-swatch {
+      border: none;
+    }
+    &::-moz-color-swatch {
+      border: none;
+    }
+  }
+  &[type="date"], &[type="month"], &[type="datetime-local"]{
+    font-family : $base-font-family;
+    box-sizing: border-box;
+    &::-webkit-datetime-edit{
+      font-family: $base-font-family;
+    }
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &::-webkit-inner-spin-button{
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
   }
   &[type='number']{
     -moz-appearance: textfield;
@@ -249,6 +329,124 @@ input.wwcode-input{
   &[type="radio"]{
     display: none;
   }
+
+  &[type=range] {
+    -webkit-appearance: none;
+    border-bottom: 0;
+    width: 100%;
+    margin: $standard-padding/2 0;
+    &:focus {
+      outline: none;
+    }
+    &:disabled{
+      pointer-events: none;
+      &::-webkit-slider-runnable-track {
+        background: $disabled-gray;
+      }
+      &::-webkit-slider-thumb {
+        background: $disabled-gray;
+      }
+      &::-moz-range-track{
+        background: $disabled-gray;
+      }
+      &::-moz-range-thumb {
+        background: $disabled-gray;
+      }
+      &::-ms-track {
+        background: $disabled-gray;
+      }
+      &::-ms-fill-lower {
+        background: $disabled-gray;
+      }
+      &::-ms-fill-upper {
+        background: $disabled-gray;
+      }
+      &::-ms-thumb {
+        background: $disabled-gray;
+      }
+    }
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: $standard-padding/10;
+      cursor: pointer;
+      box-shadow: none;
+      background: $blackish;
+      border-radius: 0;
+    }
+    &::-webkit-slider-thumb {
+      box-shadow: none;
+      border: none;
+      height: $standard-padding/1.5;
+      width: $standard-padding/1.5;
+      border-radius: 100%;
+      background: $teal;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: $standard-padding/-3.33;
+    }
+    &:focus::-webkit-slider-runnable-track {
+      background: $blackish;
+    }
+    &::-moz-range-track {
+      width: 100%;
+      height: $standard-padding/10;
+      cursor: pointer;
+      box-shadow: none;
+      background: $blackish;
+      border-radius: 0;
+      border: 0px solid $blackish;
+    }
+    &::-moz-range-thumb {
+      box-shadow: none;
+      border: 0;
+      height: $standard-padding/1.5;
+      width: $standard-padding/1.5;
+      border-radius: 100%;
+      background: $teal;
+      cursor: pointer;
+    }
+    &::-ms-track {
+      width: 100%;
+      height: $standard-padding/10;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    &::-ms-fill-lower {
+      background: #086191;
+      border: 0 solid $blackish;
+      border-radius: 2.6px;
+      box-shadow: none;
+    }
+    &::-ms-fill-upper {
+      background: #0971a9;
+      border: 0 solid $blackish;
+      border-radius: 2.6px;
+      box-shadow: none;
+    }
+    &::-ms-thumb {
+      box-shadow: none;
+      border: 1px solid #000000;
+      height: $standard-padding/1.5;
+      width: $standard-padding/1.5;
+      border-radius: 100%;
+      background: $teal;
+      cursor: pointer;
+      height: $standard-padding/10;
+    }
+    &:focus {
+      &::-ms-fill-lower {
+        background: $teal;
+      }
+      &::-ms-fill-upper {
+        background: $teal;
+      }
+    }
+  }
+
+
+  
   &[type="submit"]{
     color: $white;
     cursor: pointer;
@@ -258,8 +456,12 @@ input.wwcode-input{
     margin-top: $standard-padding;
     padding: $standard-padding/1.5;
     letter-spacing: $base-font-spacing;
-    transition: .5s;
+    transition: $delay-time;
     width: 100%;
+    &:disabled {
+      pointer-events: none;
+      background: $disabled-gray;
+    }
     &:hover{
       background-color: $teal-light;
     }
@@ -359,7 +561,7 @@ a.wwcode-link{
   font-family: $base-font-family;
   text-decoration: none;
   font-size: $base-font-size;
-  transition: .5s;
+  transition: $delay-time;
   &:hover{
     background-color: $link-teal;
     color: $blackish;
