@@ -140,12 +140,12 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 <label class="wwcode-label">Title</label>
 <div class="wwcode-checkbox"> 
-  <span class="wwcode-square"></span>
+  <span class="wwcode-square selected"></span>
   <input type="checkbox" checked/>
   <span class="wwcode-checkbox-text">This is a Selected Checkbox</span>
 </div>
 <div class="wwcode-checkbox"> 
-  <span class="wwcode-square"></span>
+  <span class="wwcode-square selected"></span>
   <input type="checkbox" checked/>
   <span class="wwcode-checkbox-text">This is a Selected Checkbox</span>
 </div>
