@@ -211,6 +211,8 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 ### Textareas
+*NOTE: when disabled, textareas are gray*
+
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511841007824-Screen+Shot+2017-11-27+at+7.49.54+PM.png" width=430>
 
 ```
@@ -219,6 +221,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 ### Inputs
+*NOTE: when disabled, inputs are gray*
 
 **button**
 
@@ -286,6 +289,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 **Range**
+*NOTE: when disabled, Range input is gray*
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515188148-Screen+Shot+2017-12-05+at+3.06.03+PM.png" width="390">
 
@@ -295,6 +299,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 **Color**
+*NOTE: when disabled, color select has a lighter opacity*
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515648335-Screen+Shot+2017-12-05+at+3.13.08+PM.png" width="70">
 
@@ -304,6 +309,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 **submit**
+*NOTE: when disabled, submit is gray*
 
 *NOTE: When submit inputs are hovered they should have a lighter teal color. When they are pressed they should have a darker teal color.*
 
@@ -327,6 +333,8 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 ### Selects
+*NOTE: when disabled, selects are gray*
+
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511903624321-Screen+Shot+2017-11-28+at+1.13.14+PM.png" width="300">
 
 ```
