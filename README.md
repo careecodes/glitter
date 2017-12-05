@@ -256,6 +256,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 **Date**
+*NOTE: font is different in Firefox*
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515373899-Screen+Shot+2017-12-05+at+3.09.19+PM.png" width="350">
 
@@ -265,6 +266,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 **Datetime-local**
+*NOTE: not Firefox supported*
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515548207-Screen+Shot+2017-12-05+at+3.11.57+PM.png" width="350">
 
@@ -274,6 +276,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 
 **Month**
+*NOTE: not Firefox supported*
 
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512515479496-Screen+Shot+2017-12-05+at+3.10.43+PM.png" width="350">
 

@@ -215,6 +215,7 @@ button.wwcode-button{
 
 //Inputs
 input.wwcode-input{
+  color: $blackish;
   border: none;
   border-bottom: $input-border-size solid $blackish;
   box-sizing: border-box;
@@ -230,6 +231,7 @@ input.wwcode-input{
       border-bottom: $input-border-size solid $blackish;
   }
   &:disabled{
+    color: $disabled-gray;
     background: transparent;
     border-bottom: $standard-padding/10 solid $disabled-gray;
   }
@@ -498,6 +500,13 @@ select.wwcode-select{
   padding: $standard-padding/1.5; 
   -webkit-appearance: none;
   width: 100%;
+  &:disabled{
+    border: $input-border-size solid $disabled-gray;
+    background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512516903568-arrow+2.svg");    
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 
 //Tags
@@ -542,6 +551,11 @@ textarea.wwcode-textarea{
   width: 100%;
   &:active{
     outline: none;
+  }
+  &:disabled{
+    background: transparent;
+    color: $disabled-gray;
+    border: $input-border-size solid $disabled-gray;
   }
   &:focus{
     outline: none;
