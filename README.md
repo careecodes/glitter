@@ -186,7 +186,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 ```
 <label class="wwcode-label">Title</label>
 <div class="wwcode-radio"> 
-  <span class="wwcode-square"></span>
+  <span class="wwcode-square selected"></span>
   <input type="radio" checked/>
   <span class="wwcode-radio-text">This is a Selected Radio Button</span>
 </div>
