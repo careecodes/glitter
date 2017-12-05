@@ -33,7 +33,7 @@ Since this repo is a scss file of variables, your app will need to support [sass
 **If you use CSS**
 Add this tag in the [head tag](https://www.w3schools.com/tags/tag_head.asp) of your app before any other style tags:
 ```
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/WomenWhoCode/glitter/4/wwcode.css" />
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/WomenWhoCode/glitter/4/wwcode.css" />
 ```
 
 **If you use SCSS**
