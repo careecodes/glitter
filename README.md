@@ -200,6 +200,7 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 ### Uploaders
 *NOTE: When hovered, uploaders should have a teal border with teal text.*
+
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511840894361-Screen+Shot+2017-11-27+at+7.47.59+PM.png" width="330">
 
 ```
