@@ -389,6 +389,20 @@ NOTE:
 </div>
 ```
 
+If you want to make a list of errors in the alert, use this format -->
+
+```
+<div class="wwcode-alert wwcode-alert-error">
+  <span class="wwcode-alert-text">Error Alert!</span>
+  <ul>
+    <li>thing</li>
+    <li>thing</li>
+    <li>thing</li>
+  </ul>
+  <span class="wwcode-delete">+</span>
+</div>
+```
+
 ### Open Source License
 
 [The Non-Profit Open Software License version 3.0 (NPOSL-3.0)](https://opensource.org/licenses/NPOSL-3.0)

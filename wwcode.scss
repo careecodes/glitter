@@ -640,6 +640,17 @@ a.wwcode-link{
     position: relative;
     top: $standard-padding/7.5;
   }
+  ul,ol{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+    padding: $standard-padding/2 $standard-padding;
+  }
+  li{
+    text-align: left;
+  }
   .wwcode-delete{
     color: $white;
     font-size: $standard-padding;
@@ -650,9 +661,9 @@ a.wwcode-link{
     width: $standard-padding*.76;
     height: $standard-padding*.93;
     margin: 0;
-    position: relative;
-    right: $standard-padding*1.5;
-    top: $standard-padding/-5;
+    position: absolute;
+    right: $standard-padding*2;
+    top: $standard-padding/2;
   }
   span.wwcode-span{
     position: relative;

@@ -550,6 +550,17 @@ a.wwcode-link.wwcode-link-underline:hover {
   position: relative;
   top: 4px;
 }
+.wwcode-alert ul, .wwcode-alert ol {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  padding: 15px 30px;
+}
+.wwcode-alert li {
+  text-align: left;
+}
 .wwcode-alert .wwcode-delete {
   color: #ffffff;
   font-size: 30px;
@@ -560,9 +571,9 @@ a.wwcode-link.wwcode-link-underline:hover {
   width: 22.8px;
   height: 27.9px;
   margin: 0;
-  position: relative;
-  right: 45px;
-  top: -6px;
+  position: absolute;
+  right: 60px;
+  top: 15px;
 }
 .wwcode-alert span.wwcode-span {
   position: relative;
