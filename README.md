@@ -367,7 +367,9 @@ NOTE: If you want inline error functionality you will need to use javascript in 
 
 
 ### Alerts
-NOTE: place these outside of any width constraining container (banners will be 100% the width of the screen). Banners will appear under your top nav, which is assumed to be fixed at the top of the page & 75px high.
+NOTE: 
+    - Display only one banner at a time on a page.
+    - Place these outside of any width constraining container (banners will be 100% the width of the screen) and below your top navigation.
 #### Sucess Alert Banner
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511299152083-sucess.jpg" width="600">
 

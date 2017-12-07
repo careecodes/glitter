@@ -420,7 +420,6 @@ select.wwcode-select:disabled {
   border: 3px solid #878C8C;
   background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512516903568-arrow+2.svg");
 }
-
 select.wwcode-select:focus {
   outline: 0;
 }
@@ -535,7 +534,6 @@ a.wwcode-link.wwcode-link-underline:hover {
   padding: 20px;
   position: fixed;
   text-align: center;
-  top: 75px;
   width: 100%;
   z-index: 9;
 }
