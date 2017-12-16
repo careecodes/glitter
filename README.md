@@ -26,7 +26,8 @@ Getting ready to start jumping in? :smiley_cat: Once you've read this README, ju
   * [isometimescode](https://github.com/isometimescode)
 
 ## Requirements
-Since this repo is a scss file of variables, your app will need to support [sass](http://sass-lang.com/install). Check out [their docs to check out how to install sass in your app](http://sass-lang.com/install).
+- [Jquery installation](https://jquery.com/)
+- Your app will need to support [sass](http://sass-lang.com/install). Check out [their docs to check out how to install sass in your app](http://sass-lang.com/install).
 
 ## Installation
 
