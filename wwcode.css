@@ -4,7 +4,6 @@
 /* For the most recent variables version, please visit:
 /* https://github.com/WomenWhoCode/glitter
 /*
-
 /* === INDEX === */
 /*  1. FORM STYLES
 /*  2. LINK STYLES
@@ -526,14 +525,17 @@ a.wwcode-link.wwcode-link-underline:hover {
 /* ======================= */
 .wwcode-alert {
   background-color: rgba(0, 122, 124, 0.8);
+  box-sizing: border-box;
   color: #ffffff;
   font-family: "Lucida Grande";
   font-size: 18px;
   left: 0;
   letter-spacing: 2px;
+  line-height: 25px;
   padding: 20px;
   position: fixed;
   text-align: center;
+  top: 0;
   width: 100%;
   z-index: 9;
 }
@@ -547,8 +549,13 @@ a.wwcode-link.wwcode-link-underline:hover {
   color: #ffffff;
 }
 .wwcode-alert .wwcode-alert-text {
+  padding-right: 30px;
   position: relative;
-  top: 4px;
+  top: 0;
+}
+.wwcode-alert .wwcode-alert-text.left-aligned {
+  display: block;
+  text-align: left;
 }
 .wwcode-alert ul, .wwcode-alert ol {
   -webkit-margin-before: 0;
@@ -556,7 +563,8 @@ a.wwcode-link.wwcode-link-underline:hover {
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
   -webkit-padding-start: 0;
-  padding: 15px 30px;
+  padding: 10px 30px;
+  padding-left: 20px;
 }
 .wwcode-alert li {
   text-align: left;
@@ -572,7 +580,7 @@ a.wwcode-link.wwcode-link-underline:hover {
   height: 27.9px;
   margin: 0;
   position: absolute;
-  right: 60px;
+  right: 30px;
   top: 15px;
 }
 .wwcode-alert span.wwcode-span {

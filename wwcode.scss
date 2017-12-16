@@ -4,7 +4,6 @@
 /* For the most recent variables version, please visit:
 /* https://github.com/WomenWhoCode/glitter
 /*
-
 /* === INDEX === */
 /*  1. VARIABLES
 /*  2. FORM STYLES
@@ -65,6 +64,7 @@ $base-font-family:          "Lucida Grande";
 
 //Font Spacing
 $base-font-spacing:         2px;
+$base-line-height:          25px;
 
 //Font Sizes
 $base-font-size:            18px;
@@ -446,9 +446,6 @@ input.wwcode-input{
       }
     }
   }
-
-
-  
   &[type="submit"]{
     color: $white;
     cursor: pointer;
@@ -617,14 +614,17 @@ a.wwcode-link{
 
 .wwcode-alert{
   background-color: $teal-rgba;
+  box-sizing: border-box;
   color: $white;
   font-family: $base-font-family;
   font-size: $base-font-size;
   left: 0;
   letter-spacing: $base-font-spacing;
+  line-height: $base-line-height;
   padding: $standard-padding/1.5;
   position: fixed;
   text-align: center;
+  top: 0;
   width: 100%;
   z-index: 9;
   &.wwcode-alert-error{
@@ -637,8 +637,13 @@ a.wwcode-link{
     }
   }
   .wwcode-alert-text{
+    padding-right: $standard-padding;
     position: relative;
-    top: $standard-padding/7.5;
+    top: 0;
+    &.left-aligned{
+      display: block;
+      text-align: left;
+    }
   }
   ul,ol{
     -webkit-margin-before: 0;
@@ -646,7 +651,8 @@ a.wwcode-link{
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     -webkit-padding-start: 0;
-    padding: $standard-padding/2 $standard-padding;
+    padding: $standard-padding/3 $standard-padding;
+    padding-left: $standard-padding/1.5;
   }
   li{
     text-align: left;
@@ -662,7 +668,7 @@ a.wwcode-link{
     height: $standard-padding*.93;
     margin: 0;
     position: absolute;
-    right: $standard-padding*2;
+    right: $standard-padding;
     top: $standard-padding/2;
   }
   span.wwcode-span{

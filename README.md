@@ -370,6 +370,15 @@ NOTE: If you want inline error functionality you will need to use javascript in 
 NOTE: 
     - Display only one banner at a time on a page.
     - Place these outside of any width constraining container (banners will be 100% the width of the screen) and below your top navigation.
+
+*NOTE: Alerts will require Javascript for their "x" button. Here is an example if you want to use straight Javascript in order to make it work:*
+
+```
+$('.wwcode-delete').click(function() {
+  $('.wwcode-alert').remove();
+});
+```
+
 #### Sucess Alert Banner
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1511299152083-sucess.jpg" width="600">
 
@@ -389,11 +398,11 @@ NOTE:
 </div>
 ```
 
-If you want to make a list of errors in the alert, use this format -->
+If you want to make a list of errors in the alert with all text aligned to the left, use this format -->
 
 ```
 <div class="wwcode-alert wwcode-alert-error">
-  <span class="wwcode-alert-text">Error Alert!</span>
+  <span class="wwcode-alert-text left-aligned">Error Alert!</span>
   <ul>
     <li>thing</li>
     <li>thing</li>
