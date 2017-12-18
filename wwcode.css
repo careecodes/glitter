@@ -503,7 +503,7 @@ a.wwcode-link.wwcode-link-underline:hover {
 /* ======================= */
 /* === 3. ERROR STYLES === */
 /* ======================= */
-.wwcode-error-text {
+.wwcode-error {
   color: #e04a32;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -511,12 +511,12 @@ a.wwcode-link.wwcode-link-underline:hover {
   font-size: 18px;
 }
 
-.wwcode-input.wwcode-error-input {
+.wwcode-input.wwcode-error {
   border: 3px solid #e04a32;
   padding: 20px 20px 20px 0;
   border: 3px solid #e04a32;
 }
-.wwcode-input.wwcode-error-input:focus {
+.wwcode-input.wwcode-error:focus {
   border: 3px solid #e04a32;
 }
 

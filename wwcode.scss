@@ -223,7 +223,7 @@ input.wwcode-input{
   font-family: $base-font-family;
   font-size: $base-font-size;
   letter-spacing: $base-font-spacing;
-  padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0; 
+  padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;
   width: 100%;
   &:active{
       box-shadow: none;
@@ -481,7 +481,7 @@ label.wwcode-label{
   padding-bottom: $standard-padding/5;
   text-transform: uppercase;
 }
-  
+
 //Selects
 select.wwcode-select{
   background: $white;
@@ -494,12 +494,12 @@ select.wwcode-select{
   font-family: $base-font-family;
   font-size: $base-font-size;
   -moz-appearance: none;
-  padding: $standard-padding/1.5; 
+  padding: $standard-padding/1.5;
   -webkit-appearance: none;
   width: 100%;
   &:disabled{
     border: $input-border-size solid $disabled-gray;
-    background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512516903568-arrow+2.svg");    
+    background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512516903568-arrow+2.svg");
   }
   &:focus {
     outline: 0;
@@ -590,7 +590,7 @@ a.wwcode-link{
 /* === 4. ERROR STYLES === */
 /* ======================= */
 
-.wwcode-error-text{
+.wwcode-error{
   color: $red;
   margin-top: $standard-padding/3;
   margin-bottom: $standard-padding/2;
@@ -598,9 +598,9 @@ a.wwcode-link{
   font-size: $base-font-size;
 }
 .wwcode-input{
-  &.wwcode-error-input{
+  &.wwcode-error{
     border: $input-border-size solid $red;
-    padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;  
+    padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;
     border: $input-border-size solid $red;
     &:focus{
       border: $input-border-size solid $red;

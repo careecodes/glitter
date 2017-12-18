@@ -44,7 +44,7 @@ First, navigate to the folder you'd like to host the Women Who Code styles in.
 ```
 cd /url/to/your/scss/folder
 ```
- 
+
 Then, download the files into your project:
 
 ```
@@ -96,8 +96,8 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 
 ### Buttons
-*NOTE:* 
-- *When buttons are hovered they should have a lighter teal color.* 
+*NOTE:*
+- *When buttons are hovered they should have a lighter teal color.*
 - *When buttons are pressed they should have a darker teal color.*
 - *When buttons are disabled they should be gray and not allow pointer events*
 
@@ -127,12 +127,12 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 ```
 <label class="wwcode-label">Title</label>
-<div class="wwcode-checkbox"> 
+<div class="wwcode-checkbox">
   <span class="wwcode-square"></span>
   <input type="checkbox" />
   <span class="wwcode-checkbox-text">This is a Checkbox</span>
 </div>
-<div class="wwcode-checkbox"> 
+<div class="wwcode-checkbox">
   <span class="wwcode-square"></span>
   <input type="checkbox" />
   <span class="wwcode-checkbox-text">This is a Checkbox</span>
@@ -144,12 +144,12 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 ```
 <label class="wwcode-label">Title</label>
-<div class="wwcode-checkbox"> 
+<div class="wwcode-checkbox">
   <span class="wwcode-square selected"></span>
   <input type="checkbox" checked/>
   <span class="wwcode-checkbox-text">This is a Selected Checkbox</span>
 </div>
-<div class="wwcode-checkbox"> 
+<div class="wwcode-checkbox">
   <span class="wwcode-square selected"></span>
   <input type="checkbox" checked/>
   <span class="wwcode-checkbox-text">This is a Selected Checkbox</span>
@@ -173,12 +173,12 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 ```
 <label class="wwcode-label">Title</label>
-<div class="wwcode-radio"> 
+<div class="wwcode-radio">
   <span class="wwcode-square"></span>
   <input type="radio" />
   <span class="wwcode-radio-text">This is a Radio Button</span>
 </div>
-<div class="wwcode-radio"> 
+<div class="wwcode-radio">
   <span class="wwcode-square"></span>
   <input type="radio" />
   <span class="wwcode-radio-text">This is a Radio Button</span>
@@ -190,12 +190,12 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 ```
 <label class="wwcode-label">Title</label>
-<div class="wwcode-radio"> 
+<div class="wwcode-radio">
   <span class="wwcode-square selected"></span>
   <input type="radio" checked/>
   <span class="wwcode-radio-text">This is a Selected Radio Button</span>
 </div>
-<div class="wwcode-radio"> 
+<div class="wwcode-radio">
   <span class="wwcode-square"></span>
   <input type="radio" />
   <span class="wwcode-radio-text">This is a Radio Button</span>
@@ -349,26 +349,27 @@ If instalation is sucessful & there are no overriding styles in your app, you sh
 
 #### Inline_errors
 
-NOTE: If you want inline error functionality you will need to use javascript in order to update a general input to display an error. Here is an example:
+NOTE: If you want inline error functionality you will need to use javascript in order to update a general input to display an error. One way to do this is to use the [jQuery Validate library](https://jqueryvalidation.org/)
 ```
 <script>
-  $('.wwcode-input').addClass('wwcode-error-input');
-  $('.wwcode-error-text').text("This is inline error text.");
+  $("#your_form_id").validate({
+    errorClass: 'wwcode-error',
+  });
 </script>
 ```
 <img src="https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1510604096279-Screen+Shot+2017-11-13+at+12.14.37+PM.png" width="350">
 
 ```
 <label class="wwcode-label">Title</label>
-<input class="wwcode-error-input wwcode-input" placeholder="This is a general input with error">
-<div class="wwcode-error-text">
+<input class="wwcode-error wwcode-input" placeholder="This is a general input with error">
+<div class="wwcode-error">
   <span>This is inline error text.</span>
 </div>
 ```
 
 
 ### Alerts
-NOTE: 
+NOTE:
     - Display only one banner at a time on a page.
     - Place these outside of any width constraining container (banners will be 100% the width of the screen) and below your top navigation.
 
