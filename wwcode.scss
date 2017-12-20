@@ -593,7 +593,7 @@ a.wwcode-link{
 .wwcode-error{
   color: $red;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: $standard-padding/3;
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
