@@ -592,15 +592,28 @@ a.wwcode-link{
 
 .wwcode-error{
   color: $red;
-  margin-top: 0;
-  margin-bottom: $standard-padding/3;
+  display: block;
+  margin-top: $standard-padding/3;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  input{
+    border: $input-border-size solid $red;
+    padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;  
+    &:focus{
+      border: $input-border-size solid $red;
+    }
+  }
+  label{
+    display: block !important;
+    margin-top: $standard-padding;
+  }
 }
+
 .wwcode-input{
   &.wwcode-error{
     border: $input-border-size solid $red;
     padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;
+    margin-top: 0;
     border: $input-border-size solid $red;
     &:focus{
       border: $input-border-size solid $red;
