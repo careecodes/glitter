@@ -1,90 +1,7 @@
-/* WOMEN WHO CODE GLITTER STYLE VARIABLES v1.0
-/* You may use this code however you need in your
-/* Women Who Code website!
-/* For the most recent variables version, please visit:
-/* https://github.com/WomenWhoCode/glitter
-/*
-
-/* === INDEX === */
-/*  1. VARIABLES
-/*  2. FORM STYLES
-/*  3. LINK STYLES
-/*  4. ERROR STYLES
-/*  5. ALERT STYLES
-/* ============= */
-
-
-/* ==================== */
-/* === 1. VARIABLES === */
-/* ==================== */
-
-//Official WWCode teal
-$teal:                      #007a7c;
-$teal-rgba:                 rgba(0, 122, 124, 0.8);
-
-//Other colors
-$blackish:                  #19191A;
-$blackish-rgba:             rgba(25, 25, 26, 0.5);
-$navy-bluish:               #0f283c;
-$navy-bluish-rgba:          rgba(15,40,60, 0.8);
-$red:                       #e04a32;
-$red-rgba:                  rgba(224,74,50, 0.9);
-$teal-light:                #029393;
-$teal-light-rgba:           rgba(2, 147, 147, 0.6);
-$teal-dark:                 #024f4f;
-$teal-dark-rgba:            rgba(2,79,79,.6);
-
-//Backgrounds
-$white:                     #ffffff;
-$whitish:                   #f5f5f5;
-
-//Animations
-$delay-time:                .5s;
-//Links
-$link-teal:                #67bebf;
-$disabled-gray:            #878C8C;
-
-//buttons
-$button-bg:                 $teal;
-$button-hover:              $teal-light;
-$button-focus:              $teal-dark;
-
-//Alerts
-$error-inline-color:        $red;
-$error-alert-background:    $red-rgba;
-$success-alert-background:  $teal-rgba;
-
-//Inputs
-$input-border-size:         3px;
-
 //Input Background Image Sizes
 $check-size:                21px;
 
-//Font Families
-$base-font-family:          "Lucida Grande";
-
-//Font Spacing
-$base-font-spacing:         2px;
-
-//Font Sizes
-$base-font-size:            18px;
-$base-mobile-size:          16px;
-
-//Font Colors
-$base-font-color:           $blackish;
-
-//General Padding
-$standard-padding:          30px;
-
-//Top Nav
-$top-nav-height:            75px;
-
-
-/* ====================== */
-/* === 2. FORM STYLES === */
-/* ====================== */
-
-//Button
+// Button
 button.wwcode-button{
   background-color: $button-bg;
   border: none;
@@ -112,7 +29,7 @@ button.wwcode-button{
   }
 }
 
-//Checkboxes
+// Checkboxes
 .wwcode-checkbox{
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -177,43 +94,7 @@ button.wwcode-button{
   }
 }
 
-//Image Uploaders
-#wwcode-filepicker-url{
-  border-style: dashed;
-  border-color: $blackish;
-  color: $blackish;
-  cursor: pointer;
-  font-family: $base-font-family;
-  text-align: center;
-  transition: $delay-time;
-  padding: $standard-padding/1.5;
-  letter-spacing: $standard-padding/15;
-  &:hover{
-    border-color: $teal;
-    button{
-      color: $teal;
-    }
-    p{
-      color: $teal;
-    }
-  }
-  p{
-    margin: 0;
-    transition: $delay-time;
-  }
-  button{
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    outline: none;
-    transition: $delay-time;
-    -webkit-appearance: none;
-  }
-}
-
-//Inputs
+// Inputs
 input.wwcode-input{
   color: $blackish;
   border: none;
@@ -223,7 +104,7 @@ input.wwcode-input{
   font-family: $base-font-family;
   font-size: $base-font-size;
   letter-spacing: $base-font-spacing;
-  padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0; 
+  padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;
   width: 100%;
   &:active{
       box-shadow: none;
@@ -447,8 +328,6 @@ input.wwcode-input{
     }
   }
 
-
-  
   &[type="submit"]{
     color: $white;
     cursor: pointer;
@@ -473,7 +352,7 @@ input.wwcode-input{
   }
 }
 
-//Labels
+// Labels
 label.wwcode-label{
   color: $blackish;
   display: block;
@@ -484,8 +363,8 @@ label.wwcode-label{
   padding-bottom: $standard-padding/5;
   text-transform: uppercase;
 }
-  
-//Selects
+
+// Selects
 select.wwcode-select{
   background: $white;
   background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala-staging/uploads%2F1508955808225-dropdown.svg");
@@ -497,47 +376,19 @@ select.wwcode-select{
   font-family: $base-font-family;
   font-size: $base-font-size;
   -moz-appearance: none;
-  padding: $standard-padding/1.5; 
+  padding: $standard-padding/1.5;
   -webkit-appearance: none;
   width: 100%;
   &:disabled{
     border: $input-border-size solid $disabled-gray;
-    background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512516903568-arrow+2.svg");    
+    background-image: url("https://s3-us-west-2.amazonaws.com/wwcodefroala/uploads%2F1512516903568-arrow+2.svg");
   }
   &:focus {
     outline: 0;
   }
 }
 
-//Tags
-.wwcode-tag{
-  background-color: $teal;
-  color: $white;
-  display: inline-block;
-  padding: $standard-padding/2;
-  padding-right: $standard-padding;
-  padding-bottom: $standard-padding/3;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  margin-top: $standard-padding/2;
-  margin-right: $standard-padding/2;
-  .wwcode-delete{
-    color: $white;
-    font-size: $standard-padding;
-    transform: rotate(45deg);
-    cursor: pointer;
-    top: $standard-padding/-3.75;
-    display: flex;
-    float: right;
-    width: $standard-padding*.76;
-    height: $standard-padding*.93;
-    margin: 0;
-    position: relative;
-    right: $standard-padding/-1.5;
-  }
-}
-
-//Textareas
+// Textareas
 textarea.wwcode-textarea{
   border: $input-border-size solid $blackish;
   box-sizing: border-box;
@@ -565,34 +416,43 @@ textarea.wwcode-textarea{
   }
 }
 
-/* ====================== */
-/* === 3. LINK STYLES === */
-/* ====================== */
-
-a.wwcode-link{
-  color: $teal;
+// Image Uploaders
+#wwcode-filepicker-url{
+  border-style: dashed;
+  border-color: $blackish;
+  color: $blackish;
   cursor: pointer;
   font-family: $base-font-family;
-  text-decoration: none;
-  font-size: $base-font-size;
+  text-align: center;
   transition: $delay-time;
+  padding: $standard-padding/1.5;
+  letter-spacing: $standard-padding/15;
   &:hover{
-    background-color: $link-teal;
-    color: $blackish;
-  }
-  &.wwcode-link-underline{
-    color: $blackish;
-    border-bottom: $standard-padding/6 solid $link-teal;
-    &:hover{
-      background-color: $link-teal;
+    border-color: $teal;
+    button{
+      color: $teal;
     }
+    p{
+      color: $teal;
+    }
+  }
+  p{
+    margin: 0;
+    transition: $delay-time;
+  }
+  button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    outline: none;
+    transition: $delay-time;
+    -webkit-appearance: none;
   }
 }
 
-/* ======================= */
-/* === 4. ERROR STYLES === */
-/* ======================= */
-
+// Inline errors
 .wwcode-error-text{
   color: $red;
   margin-top: $standard-padding/3;
@@ -603,70 +463,10 @@ a.wwcode-link{
 .wwcode-input{
   &.wwcode-error-input{
     border: $input-border-size solid $red;
-    padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;  
+    padding: $standard-padding/1.5 $standard-padding/1.5 $standard-padding/1.5 0;
     border: $input-border-size solid $red;
     &:focus{
       border: $input-border-size solid $red;
     }
-  }
-}
-
-/* ======================= */
-/* === 5. ALERT STYLES === */
-/* ======================= */
-
-.wwcode-alert{
-  background-color: $teal-rgba;
-  color: $white;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  left: 0;
-  letter-spacing: $base-font-spacing;
-  padding: $standard-padding/1.5;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  z-index: 9;
-  &.wwcode-alert-error{
-    background-color: $red-rgba;
-  }
-  a.wwcode-link{
-    border-bottom: $input-border-size solid $white;
-    &:hover{
-      color: $white;
-    }
-  }
-  .wwcode-alert-text{
-    position: relative;
-    top: $standard-padding/7.5;
-  }
-  ul,ol{
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    -webkit-padding-start: 0;
-    padding: $standard-padding/2 $standard-padding;
-  }
-  li{
-    text-align: left;
-  }
-  .wwcode-delete{
-    color: $white;
-    font-size: $standard-padding;
-    transform: rotate(45deg);
-    cursor: pointer;
-    display: flex;
-    float: right;
-    width: $standard-padding*.76;
-    height: $standard-padding*.93;
-    margin: 0;
-    position: absolute;
-    right: $standard-padding*2;
-    top: $standard-padding/2;
-  }
-  span.wwcode-span{
-    position: relative;
-    top: $standard-padding/15;
   }
 }
