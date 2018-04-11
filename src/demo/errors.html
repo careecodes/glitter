@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Glitter Documentation Site</title>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+<body>
+  <nav>
+    <a href="links.html">Buttons</a>
+  </nav>
+
+    <header>
+        <h2>Errors</h2>
+        <span>NOTE: when disabled, Range input is gray</span>
+    </header>
+
+    <section>
+        <h3>Inline_errors</h3>
+        <span>NOTE: If you want inline error functionality you will need to use javascript in order to update a general input to display an error. Here is an example:</span>
+        <pre>
+            $('.wwcode-input').addClass('wwcode-error-input');
+            $('.wwcode-error-text').text("This is inline error text.");
+        </pre>
+        <label class="wwcode-label">Title</label>
+        <input class="wwcode-error-input wwcode-input" placeholder="This is a general input with error">
+        <div class="wwcode-error-text">
+          <span>This is inline error text.</span>
+        </div>
+        <pre>CODEBLOCK</pre>
+    </section>
+</body>
+</html>

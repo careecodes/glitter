@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Glitter Documentation Site</title>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+<body>
+  <nav>
+    <a href="links.html">Checkboxes</a>
+  </nav>
+
+  <header>
+    <h2>Radio Buttons</h2>
+  </header>
+      <section>
+        <h3>Radios</h3>
+        <span>NOTE: Radio buttons will require Javascript. Here is an example if you want to use straight Javascript in order to make it work:</span>
+        <pre>
+            $('.wwcode-square').click(function(){
+              var isChecked = event.target.nextElementSibling.checked;
+              $(this).toggleClass("selected");
+              event.target.nextElementSibling.checked = !isChecked;
+            });
+        </pre>
+      </section>
+      <section>
+        <h3>Unselected</h3>
+        <label class="wwcode-label">Title</label>
+        <div class="wwcode-radio"> 
+          <span class="wwcode-square"></span>
+          <input type="radio" />
+          <span class="wwcode-radio-text">This is a Radio Button</span>
+        </div>
+        <div class="wwcode-radio"> 
+          <span class="wwcode-square"></span>
+          <input type="radio" />
+          <span class="wwcode-radio-text">This is a Radio Button</span>
+        </div>
+        <pre>
+            CODEBLOCK
+        </pre>
+      </section>
+      <section>
+          <h3>Selected</h3>
+          <label class="wwcode-label">Title</label>
+          <div class="wwcode-radio"> 
+            <span class="wwcode-square selected"></span>
+            <input type="radio" checked/>
+            <span class="wwcode-radio-text">This is a Selected Radio Button</span>
+          </div>
+          <div class="wwcode-radio"> 
+            <span class="wwcode-square"></span>
+            <input type="radio" />
+            <span class="wwcode-radio-text">This is a Radio Button</span>
+          </div>
+          <pre>
+              CODEBLOCK
+          </pre>
+        </section>
+</body>
+</html>
