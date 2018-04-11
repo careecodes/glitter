@@ -5,9 +5,19 @@
   <link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 <body>
-  <nav>
-    <a href="links.html">Buttons</a>
-  </nav>
+    <nav id="navMenu">
+      </nav>
+      <script type="text/template" id="loadNav">
+          <ul>
+              {{#navLinks}}
+                  <li>
+                      <a href="{{linkDestination}}">
+                              {{linkName}}
+                      </a>
+                  </li>
+              {{/navLinks}}
+          </ul>
+      </script>
 
   <header>
     <h2>Selects</h2>
@@ -21,5 +31,11 @@
       </select>
       <pre>CODEBLOCK</pre>
     </section>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

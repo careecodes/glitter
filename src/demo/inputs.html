@@ -5,9 +5,25 @@
   <link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 <body>
-  <nav>
+
+    <nav id="navMenu">
+    </nav>
+    <script type="text/template" id="loadNav">
+        <ul>
+            {{#navLinks}}
+                <li>
+                    <a href="{{linkDestination}}">
+                            {{linkName}}
+                    </a>
+                </li>
+            {{/navLinks}}
+        </ul>
+    </script>
+    
+
+  <!-- <nav>
     <a href="links.html">Buttons</a>
-  </nav>
+  </nav> -->
 
   <header>
     <h2>Inputs</h2>
@@ -79,5 +95,12 @@
         <input type="submit" class="wwcode-input" placeholder="This is a general submit input">
         <pre>CODEBLOCK</pre>
     </section>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

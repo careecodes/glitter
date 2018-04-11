@@ -37,6 +37,7 @@
     "start": "webpack-dev-server --mode development --open-page src/"
   },
   "dependencies": {
-    "glitter": "https://github.com/WomenWhoCode/glitter.git"
+    "glitter": "https://github.com/WomenWhoCode/glitter.git",
+    "mustache": "^2.3.0"
   }
 }
