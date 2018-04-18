@@ -10,10 +10,6 @@ $(document).ready(function(){
                 "linkName": "Home",
             },
             {
-                "linkDestination": "links.html",
-                "linkName": "Links",
-            },
-            {
                 "linkDestination": "buttons.html",
                 "linkName": "Buttons",
             },
@@ -22,38 +18,13 @@ $(document).ready(function(){
                 "linkName": "Checkboxes",
             },
             {
-                "linkDestination": "radios.html",
-                "linkName": "Radio Buttons",
+                "linkDestination": "https://github.com/WomenWhoCode/glitter",
+                "linkName": "GitHub",
             },
             {
-                "linkDestination": "uploaders.html",
-                "linkName": "Uploaders",
-            },
-            {
-                "linkDestination": "textareas.html",
-                "linkName": "Textareas",
-            },
-            {
-                "linkDestination": "inputs.html",
-                "linkName": "Inputs",
-            },
-            {
-                "linkDestination": "tags.html",
-                "linkName": "Tags",
-            },
-            {
-                "linkDestination": "selects.html",
-                "linkName": "Selects",
-            },
-            {
-                "linkDestination": "errors.html",
-                "linkName": "Errors",
-            },
-            {
-                "linkDestination": "alerts.html",
-                "linkName": "Alerts",
+                "linkDestination": "https://www.womenwhocode.com/",
+                "linkName": "Women Who Code",
             }
-
         ]
     };
   
